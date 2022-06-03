@@ -1,1 +1,1 @@
-writing a C program that prints a sentence
+printing a sentence and new line
