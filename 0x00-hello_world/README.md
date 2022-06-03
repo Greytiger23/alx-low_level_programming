@@ -1,1 +1,1 @@
-generating the assembly code for c file
+compiling a cf file and executing a name
