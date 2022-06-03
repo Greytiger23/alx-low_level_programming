@@ -1,1 +1,1 @@
-writing a script that runs a c file through the processor
+compling a c file that does not link
