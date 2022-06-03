@@ -1,1 +1,1 @@
-compiling a cf file and executing a name
+writing a C program that prints a sentence
