@@ -1,1 +1,1 @@
-compling a c file that does not link
+generating the assembly code for c file
