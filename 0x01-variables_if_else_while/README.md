@@ -1,1 +1,1 @@
-assign random numbers to the variable n every time it is executed
+assigning a random number and printing out the last digit
