@@ -1,1 +1,1 @@
-assigning a random number and printing out the last digit
+printing out the alphabet with lowercase
