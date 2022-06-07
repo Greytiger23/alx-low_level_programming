@@ -1,1 +1,1 @@
-printing out the alphabet with lowercase
+rints alphabet in lowercase and uppercase
