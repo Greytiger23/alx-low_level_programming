@@ -1,1 +1,1 @@
-print the alphabet in lowercase except q and e
+printing out single numbers
