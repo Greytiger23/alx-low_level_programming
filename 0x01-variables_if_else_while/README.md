@@ -1,1 +1,1 @@
-rints alphabet in lowercase and uppercase
+print the alphabet in lowercase except q and e
