@@ -7,7 +7,7 @@ int main(void)
 {
 int i;
 printf("Infinite loop incoming :(\n");
-i = 0;
+i = 0; /* Don't delete it! */
 while (i < 10)
 {
 putchar(i);
