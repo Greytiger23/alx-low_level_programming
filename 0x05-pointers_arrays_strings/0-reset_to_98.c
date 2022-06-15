@@ -1,16 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * main - prints out the pointer variable
- * Return: Always 0 (Success)
  * reset_to_98 - pointer variable declaration
+ * Return: Nothing
  * @n: first integer
  */
-int main(void)
+void reset_to_98(int *n)
 {
-int a = 98;
-int *reset_to_98 = &a; /* pointer variable declartion */
-printf("n = %d\n", n);
-printf("n = %d\n", *reset_to_98);
-return (0);
+*n = 98;
 }
