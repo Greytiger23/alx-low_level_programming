@@ -8,5 +8,6 @@
  */
 int _putchar(char c)
 {
-return (write(1, 8c, 1));
+putchar(c++);
+return(c);
 }
