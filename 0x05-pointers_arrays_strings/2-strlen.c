@@ -2,16 +2,16 @@
 #include <stdio.h>
 /**
  * _strlen - is a pointer variable to a character
- * Return: Nothing
+ * Return: Always 0 (Success)
  * @s: input character parameter
  */
 int _strlen(char *s)
 {
-int a;
-a = 0;
-while (s[a] != '\0')
+int l;
+l = 0;
+while (s[l] != '\0')
 {
-a++;
+l++;
 }
-return(0);
+return (l);
 }
