@@ -1,21 +1,25 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * puts2 - pointer that changes 
+ * puts2 - pointer that changes
  * @str: character
  * Return: void
  */
 void puts2(char *str)
 {
-int n;
-n = 0;
-while (str[n] != '\0')
+char *end;
+int n, sum;
+int len = 0;
+for (n = 0; str[n]; n++)
 {
-n++;
+len++;
 }
-for (n = 0; n <= 0; n++)
+sum = len;
+end = str;
+for (n = 0; n < sum; n++)
 {
 putchar(str[n]);
+end++;
 }
 putchar('\n');
 }
