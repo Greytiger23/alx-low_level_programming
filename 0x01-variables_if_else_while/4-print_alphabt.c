@@ -10,9 +10,6 @@ char a;
 for (a = 'a'; a <= 'z'; a++)
 {
 putchar(a);
-for (a = 'q'; a = 'e'; a--)
-{
-a--;
 }
 putchar('\n');
 return (0);
