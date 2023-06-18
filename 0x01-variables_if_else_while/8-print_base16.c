@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * print numbers of base 
+ * print numbers of base
  * Return: Always 0 (Success)
  */
 int main(void)
