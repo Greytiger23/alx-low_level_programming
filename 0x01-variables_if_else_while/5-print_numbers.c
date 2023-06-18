@@ -15,8 +15,7 @@ a = a + 1;
 }
 if (a > 9)
 {
-printf(" ");
-}
 printf("\n");
+}
 return (0);
 }
