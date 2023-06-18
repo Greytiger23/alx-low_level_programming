@@ -8,6 +8,5 @@
 int main(void)
 {
 int is;
-is = n % 10;
 return (0);
 }
