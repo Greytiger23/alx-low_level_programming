@@ -17,9 +17,9 @@ for (c = b + 1; c <= 9; c++)
 putchar(a + '0');
 putchar(b + '0');
 putchar(c + '0');
-if (a < 8 || b < 9 || c < 8)
+if (a < 8 || b < 9 || c < 9)
 {
-if (c = 789)
+if (a == 7)
 {
 continue;
 }
