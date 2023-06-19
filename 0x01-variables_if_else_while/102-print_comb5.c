@@ -7,30 +7,31 @@
 int main(void)
 {
 int a, b, c, d;
-a = 0;
-while (a <= 9)
+for (a = 0; a <= 9; a++)
 {
 for (b = 0; b <= 9; b++)
 {
-putchar(a + '0');
-putchar(b + '0');
-putchar(' ');
 for (c = 0; c <= 9; c++)
 {
 for (d = c + 1; d <= 9; d++)
 {
+putchar(a + '0');
+putchar(b + '0');
+putchar(' ');
 putchar(c + '0');
 putchar(d + '0');
-if (a > 9 || b > 8 || c > 9 || d > 9)
+if (a < 9 || b < 8)
+{
+if (b == 8)
 {
 continue;
-}
-}
 }
 putchar(',');
 putchar(' ');
 }
-a++;
+}
+}
+}
 }
 putchar('\n');
 return (0);
