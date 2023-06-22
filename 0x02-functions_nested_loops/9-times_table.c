@@ -18,7 +18,7 @@ h = b * 7;
 i = b * 8;
 j = b * 9;
 printf("%d, %2d, %2d, %2d,", a, b, c, d); 
-printf("%2d, %2d, %2d, %2d, %2d, %2d", e, f, g, h, i, j);
+printf(" %2d, %2d, %2d, %2d, %2d, %2d", e, f, g, h, i, j);
 printf("\n");
 }
 }
