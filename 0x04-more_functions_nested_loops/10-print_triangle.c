@@ -18,13 +18,18 @@ else
 {
 for (a = 1; a <= x; a++)
 {
-_putchar(' ');
-for (b = 1; b <= a; b++)
+for (b = 1; b <= x; b++)
 {
-count++;
-_putchar('#');
-}
+if (b < x-a+1)
+{
 _putchar(' ');
+}
+else
+{
+_putchar('#');
+count++;
+}
+}
 count = a % 2;
 _putchar('\n');
 }
