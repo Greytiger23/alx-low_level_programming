@@ -20,7 +20,7 @@ for (a = 1; a <= x; a++)
 {
 for (b = 1; b <= x; b++)
 {
-if (b < x-a+1)
+if (b < x - a + 1)
 {
 _putchar(' ');
 }
