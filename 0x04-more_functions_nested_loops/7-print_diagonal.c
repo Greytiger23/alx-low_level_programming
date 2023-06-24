@@ -20,8 +20,8 @@ _putchar(' ');
 if (a == n)
 {
 _putchar('\\');
-}
-}
 _putchar('\n');
+}
+}
 }
 }
