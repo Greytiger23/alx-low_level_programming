@@ -2,16 +2,16 @@
 #include <string.h>
 
 /**
- * _puts - function that prints in string
+ * puts2 - function that prints numbers
  * @str: char pointer variable
  * Return: void
  */
 
-void _puts(char *str)
+void puts2(char *str)
 {
 int a, b;
 b = strlen(str);
-for (a = 0; a < b; a++)
+for (a = 0; a < b; a += 2)
 {
 _putchar(str[a]);
 }
