@@ -12,10 +12,12 @@ void print_rev(char *s)
 int a, x; 
 int y;
 a = strlen(s);
-for (x = 0; x < a / 2; x++)
+for (x = 0; x <= a / 2; x++)
 {
 y = s[x];
 s[x] = s[a - x - 1];
 s[a - x - 1] = y;
+_putchar(s[y]);
 }
+_putchar('\n');
 }
