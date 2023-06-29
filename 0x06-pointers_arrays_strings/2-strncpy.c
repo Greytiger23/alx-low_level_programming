@@ -6,6 +6,7 @@
  * @dest: char pointer variable
  * @src: char pointer variable
  * @n: first integer
+ * Return: void
  */
 
 char *_strncpy(char *dest, char *src, int n)
