@@ -10,11 +10,22 @@
 
 char *cap_string(char *a)
 {
-int b, c;
-c = sizeof(a);
-for (b = 0; b < c; b++)
+int b;
+for (b = 0; a[b] != '\0'; b++)
 {
-a[b] = toupper(a[b]) - 1;
+while (a[b] >= 'a' && a[b] <= 'z')
+{
+b++;
+if (a[b - 1] == ' ' || a[b -1] == '?' ||
+a[b -1] == '\t' || a[b -1] == '\n' ||
+a[b -1] == ',' || a[b -1] == ';' || 
+a[b -1] == '.' || a[b -1] == '!' || 
+a[b -1] == '(' || a[b -1] == ')' ||
+a[b -1] == '{' || a[b -1] == '}' || b == 0)
+{
+a[b] = a[b] - 'a' + 'A';
+}
+}
 }
 return (a);
 }
