@@ -21,5 +21,5 @@ a[b] = i[c];
 }
 }
 }
-return(a);
+return (a);
 }
