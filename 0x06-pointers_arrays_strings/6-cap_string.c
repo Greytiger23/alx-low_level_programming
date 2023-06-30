@@ -1,4 +1,6 @@
 #include "main.h"
+#include <ctype.h>
+#include <string.h>
 
 /**
  * cap_string - function that capitalizes string
@@ -8,13 +10,11 @@
 
 char *cap_string(char *a)
 {
-int b;
-for (b = 0; a[b] != '\0'; b++)
+int b, c;
+c = sizeof(a);
+for (b = 0; b < c; b++)
 {
-if (a[b] >= 'a' && a[b] <= 'z')
-{
-a[b] = a[b] - 'a' + 'A';
-}
+a[b] = toupper(a[b]) - 1;
 }
 return (a);
 }
