@@ -18,6 +18,7 @@ for (x = 0; x <= 52; x++)
 if (b[y] == i[x])
 {
 b[y] = w[x];
+break;
 }
 }
 }
