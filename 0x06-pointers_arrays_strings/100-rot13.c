@@ -9,10 +9,8 @@
 char *rot13(char *b)
 {
 int x, y;
-char i[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-"abcdefghijklmnopqrstuvwxyz";
-char w[] = "NOPQRSTUVWXYZABCDEFGHIJKLM"
-"nopqrstuvwxyzabcdefghijklm";
+char i[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char w[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 for (y = 0; b[y] != '\0'; y++)
 {
 for (x = 0; x <= 52; x++)
