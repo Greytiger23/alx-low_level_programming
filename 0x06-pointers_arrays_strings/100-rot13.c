@@ -8,15 +8,14 @@
 
 char *rot13(char *b)
 {
-int x, y, a;
-char i[] = "abcdefghijklmnopqrstuvwxyz"
-"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-char w[] = "nopqrstuvwxyzabcdefghijklm"
-"NOPQRSTUVWXYZABCDEFGHIJKLM";
-a = sizeof(b);
+int x, y;
+char i[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+"abcdefghijklmnopqrstuvwxyz";
+char w[] = "NOPQRSTUVWXYZABCDEFGHIJKLM"
+"nopqrstuvwxyzabcdefghijklm";
 for (y = 0; b[y] != '\0'; y++)
 {
-for (x = 0; x < a; x++)
+for (x = 0; x <= 52; x++)
 {
 if (b[y] == i[x])
 {
