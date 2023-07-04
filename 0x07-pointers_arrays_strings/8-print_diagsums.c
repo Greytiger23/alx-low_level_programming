@@ -23,5 +23,5 @@ for (y = size - 1; y >= 0; y--)
 {
 b = b + a[y * size + (size - y - 1)];
 }
-printf("%d, %d\n", x, b); 
+printf("%d, %d\n", x, b);
 }
