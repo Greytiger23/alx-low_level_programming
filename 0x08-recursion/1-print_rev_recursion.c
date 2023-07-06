@@ -8,8 +8,6 @@
  */
 void _print_rev_recursion(char *s)
 {
-int a;
-a = *s;
-strrev(a);
-printf("%s\n", a);
+_putchar(strrev(s));
+_print_rev_recursion(s - 1);
 }
