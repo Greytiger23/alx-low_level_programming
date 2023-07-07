@@ -8,11 +8,9 @@
  */
 void _print_rev_recursion(char *s)
 {
-int a, b;
-a = strlen(s);
-for (b = 0; b < a / 2; b++)
+if (*s)
 {
-swap(s[b], s[a - b - 1]);
-_print_rev_recursion(s, b + 1);
+_print_rev_recursion(s + 1);
+_putchar(*s);
 }
 }
