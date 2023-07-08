@@ -12,21 +12,23 @@ int main(int argc, char *argv[])
 {
 int a, x, i;
 char b[] = "abcdefghijklmnopqrstuvwxyz";
-for (i = 1; i < argc; i++)
+if (argc > 1)
 {
-x = 1;
-if (argc == 0)
+for (x = 1; x < argc; x++)
 {
-printf("0\n");
-}
-if (*argv[i] == b[i])
+if (*argv[x] == b[x])
 {
 printf("Error\n");
 return (1);
 }
-a = a + atoi(argv[x]);
-x++;
+a = atoi(argv[x]);
 }
-printf("%d\n", a);
+i = a + a;
+printf("%d\n", i);
+}
+else
+{
+printf("0\n");
+}
 return (0);
 }
