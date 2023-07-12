@@ -11,12 +11,17 @@ char *_strdup(char *str)
 {
 int x, n;
 char *a;
+n = 0;
+while (str[n] != '\0')
+{
+n++;
+}
 a = strdup(str);
 if (str == NULL || a == NULL)
 {
 return (NULL);
 }
-for (x = 0; x < str[x]; x++)
+for (x = 0; str[x]; x++)
 {
 a[x] = str[x];
 }
