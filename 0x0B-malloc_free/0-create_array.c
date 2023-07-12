@@ -17,7 +17,7 @@ for (x = 0; x < size; x++)
 {
 a[x] = c;
 }
-if (size == 0 && a == NULL)
+if (size == 0 || a == NULL)
 {
 return (NULL);
 }
