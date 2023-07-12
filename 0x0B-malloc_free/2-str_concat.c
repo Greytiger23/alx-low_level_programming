@@ -15,6 +15,7 @@ int a, n;
 char *b;
 a = 0;
 n = 0;
+b = malloc(sizeof(char) * (a + n + 1));
 if (s1 == NULL)
 {
 s1 = " ";
@@ -23,7 +24,6 @@ if (s2 == NULL)
 {
 s2 = " ";
 }
-b = malloc(sizeof(char) * (a + n + 1));
 if (b == NULL)
 {
 return (NULL);
