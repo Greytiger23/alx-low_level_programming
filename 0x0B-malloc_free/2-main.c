@@ -17,6 +17,6 @@ printf("failed\n");
 return (1);
 }
 printf("%s\n", s);
-ree(s);
+free(s);
 return (0);
 }
