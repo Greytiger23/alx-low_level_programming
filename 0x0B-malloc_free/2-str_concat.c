@@ -15,6 +15,14 @@ int a, n;
 char *b;
 a = 0;
 n = 0;
+if (s1[a] != '\0')
+{
+a++;
+}
+if (s2[n] != '\0')
+{
+n++;
+}
 b = malloc(sizeof(char) * (a + n + 1));
 if (s1 == NULL)
 {
