@@ -15,9 +15,12 @@ int a, n;
 char *b;
 a = 0;
 n = 0;
-if (s1 == NULL || s2 == NULL)
+if (s1 == NULL)
 {
 s1 = "";
+}
+if (s2 == NULL)
+{
 s2 = "";
 }
 while (s1[a] != '\0')
