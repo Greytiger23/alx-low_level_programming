@@ -16,7 +16,7 @@ if (str == NULL || a == NULL)
 {
 return (NULL);
 }
-for (x = 0; str[x]; x++)
+for (x = 0; x < str[x]; x++)
 {
 a[x] = str[x];
 }
