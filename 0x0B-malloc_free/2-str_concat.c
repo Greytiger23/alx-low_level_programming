@@ -16,10 +16,12 @@ char *b;
 if (s1 == NULL)
 {
 s1 = " ";
+s1 = NULL;
 }
 if (s2 == NULL)
 {
 s2 = " ";
+s2 = NULL;
 }
 b = malloc(strlen(s1) + strlen(s2) + 1);
 if (b == NULL)
@@ -34,5 +36,6 @@ for (n = 0; s2[n] != '\0'; n++)
 {
 b[a + n] = s2[n];
 }
+b[a + n] = '\0';
 return (b);
 }
