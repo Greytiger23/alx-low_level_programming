@@ -23,7 +23,7 @@ return (NULL);
 }
 for (x = 0; str[x]; x++)
 {
-if (a[x] != '\0')
+if (a[x] != NULL)
 {
 a[x] = str[x];
 }
