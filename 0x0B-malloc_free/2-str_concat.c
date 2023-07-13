@@ -26,11 +26,11 @@ if (b == NULL)
 {
 return (NULL);
 }
-for (a = 0; s1[a] != '\0'; a++)
+for (a = 0; s1[a]; a++)
 {
 b[a] = s1[a];
 }
-for (n = 0; s2[n] != '\0'; n++)
+for (n = 0; s2[n]; n++)
 {
 b[a + n] = s2[n];
 }
