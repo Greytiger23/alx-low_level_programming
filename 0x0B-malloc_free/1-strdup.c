@@ -17,7 +17,11 @@ while (str[n] != '\0')
 n++;
 }
 a = malloc((strlen(str) + 1) * sizeof(char));
-if (str == NULL || a == NULL)
+if (str == NULL)
+{
+return (NULL);
+}
+if (a == NULL)
 {
 return (NULL);
 }
@@ -26,6 +30,5 @@ for (x = 0; str[x]; x++)
 a[x] = str[x];
 }
 a[x] = '\0';
-str = '\0';
 return (a);
 }
