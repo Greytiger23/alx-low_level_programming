@@ -3,7 +3,7 @@
 
 /**
  * free_grid - function that frees a two dimensional grid
- * @*grid: integer array
+ * @grid: integer array
  * @height: integer pointer
  * Return: void
  */
