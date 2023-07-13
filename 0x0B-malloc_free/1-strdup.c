@@ -25,10 +25,6 @@ for (x = 0; str[x]; x++)
 {
 a[x] = str[x];
 }
-if (a[x] = NULL)
-{
-return (NULL);
-}
 a[x] = '\0';
 return (a);
 }
