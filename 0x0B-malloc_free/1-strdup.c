@@ -23,7 +23,7 @@ return (NULL);
 }
 for (x = 0; str[x]; x++)
 {
-if (a[x] == NULL)
+if (a == NULL)
 {
 return (NULL);
 }
