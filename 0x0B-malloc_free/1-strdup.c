@@ -16,8 +16,8 @@ while (str[n] != '\0')
 {
 n++;
 }
-a = strdup(str);
-if (str == NULL)
+a = malloc(strlen(str) * sizeof(char));
+if (str == NULL || a == NULL)
 {
 return (NULL);
 }
