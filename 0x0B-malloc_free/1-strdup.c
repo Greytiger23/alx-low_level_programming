@@ -17,7 +17,7 @@ while (str[n] != '\0')
 n++;
 }
 a = strdup(str);
-if (str == NULL || a == NULL)
+if (str == NULL)
 {
 return (NULL);
 }
