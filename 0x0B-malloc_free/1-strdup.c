@@ -23,11 +23,14 @@ return (NULL);
 }
 for (x = 0; str[x]; x++)
 {
-if (a == NULL)
+if (a[x] != '\0')
+{
+a[x] = str[x];
+}
+else
 {
 return (NULL);
 }
-a[x] = str[x];
 }
 a[x] = '\0';
 return (a);
