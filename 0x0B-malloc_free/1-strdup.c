@@ -25,6 +25,6 @@ for (x = 0; str[x]; x++)
 {
 a[x] = str[x];
 }
-a[x] = '\0';
+a = '\0';
 return (a);
 }
