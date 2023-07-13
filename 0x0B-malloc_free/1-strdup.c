@@ -9,18 +9,14 @@
 
 char *_strdup(char *str)
 {
-int x, n;
+int x;
 char *a;
 n = 0;
-while (str[n] != '\0')
-{
-n++;
-}
-a = malloc((strlen(str) + 1) * sizeof(char));
 if (str == NULL)
 {
 return (NULL);
 }
+a = malloc((strlen(str) + 1) * sizeof(char));
 if (a == NULL)
 {
 return (NULL);
