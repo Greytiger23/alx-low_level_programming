@@ -16,14 +16,12 @@ char *b;
 if (s1 == NULL)
 {
 s1 = " ";
-s1 = NULL;
 }
 if (s2 == NULL)
 {
 s2 = " ";
-s2 = NULL;
 }
-b = malloc((strlen(s1) + 1) + (strlen(s2) + 1) * sizeof(char));
+b = malloc((strlen(s1) + strlen(s2) + 1) * sizeof(char));
 if (b == NULL)
 {
 return (NULL);
