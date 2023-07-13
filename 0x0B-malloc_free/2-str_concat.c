@@ -16,12 +16,12 @@ char *b;
 if (s1 == NULL)
 {
 s1 = " ";
-return (NULL);
+s1 = '\0';
 }
 if (s2 == NULL)
 {
 s2 = " ";
-return (NULL);
+s2 = '\0';
 }
 b = malloc(strlen(s1) + strlen(s2) + 1);
 if (b == NULL)
