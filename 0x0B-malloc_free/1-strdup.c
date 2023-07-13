@@ -21,13 +21,11 @@ if (str == NULL || a == NULL)
 {
 return (NULL);
 }
-else
-{
 for (x = 0; str[x]; x++)
 {
 a[x] = str[x];
 }
-}
-a[x] = NULL;
+free(a);
+a[x] = '\0';
 return (a);
 }
