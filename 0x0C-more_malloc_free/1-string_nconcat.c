@@ -16,11 +16,11 @@ int x, y;
 char *a;
 if (s1 == NULL)
 {
-s1 = " ";
+s1 = "";
 }
 if (s2 == NULL)
 {
-s2 = " ";
+s2 = "";
 }
 a = malloc((strlen(s1) + strlen(s2) + 1) * n);
 if (a == NULL)
