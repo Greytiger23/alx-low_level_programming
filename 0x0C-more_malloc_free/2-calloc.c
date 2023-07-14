@@ -20,7 +20,7 @@ if (size == 0)
 {
 return (NULL);
 }
-a = (int *) malloc(nmemb * sizeof(size));
+a = calloc(nmemb, sizeof(size));
 if (a == NULL)
 {
 return (NULL);
