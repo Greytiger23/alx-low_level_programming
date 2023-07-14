@@ -13,8 +13,7 @@ int *a;
 a = (int *) malloc(b);
 if (a == NULL)
 {
-printf("98");
-exit(0);
+exit(98);
 }
 return (a);
 }
