@@ -17,12 +17,12 @@ if (min > max)
 {
 return (NULL);
 }
-a = malloc(max * sizeof(int));
+a = malloc((max + 1) * sizeof(int));
 if (a == NULL)
 {
 return (NULL);
 }
-for (x = 0; x < max; x++)
+for (x = min; x < max; x++)
 {
 a[x] = x;
 }
