@@ -31,13 +31,14 @@ for (x = 0; s1[x]; x++)
 {
 a[x] = s1[x];
 }
-for (y = 0; s2[y]; y++)
+for (y = 0; y < 6; y++)
 {
 if (n >= strlen(s2))
 {
-a[y] = s2[y];
+a[x + y] = s2[y];
 }
 a[x + y] = s2[y];
 }
+a[x + y] = '\0';
 return (a);
 }
