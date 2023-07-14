@@ -20,7 +20,7 @@ if (size == 0)
 {
 return (NULL);
 }
-a = calloc(nmemb, sizeof(size));
+a = calloc(nmemb, size);
 if (a == NULL)
 {
 return (NULL);
