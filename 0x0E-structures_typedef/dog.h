@@ -18,18 +18,7 @@ char *owner;
 };
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
-struct dog_t;
-struct dog_t *new_dog(char *name, float age, char *owner)
-{
-struct dog_t *b;
-b = malloc(sizeof(struct dog));
-if (b === NULL)
-{
-return (NULL);
-}
-b->name = name;
-b->age = age;
-b->owner = owner;
-return b;
-};
+struct dog_t = dog;
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
 #endif
