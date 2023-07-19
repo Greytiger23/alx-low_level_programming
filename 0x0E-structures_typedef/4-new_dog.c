@@ -47,8 +47,8 @@ free(d->name);
 free(d);
 return (NULL);
 }
-d->name = name;
+d->name = strcpy(d->name, name);
 d->age = age;
-d->owner = owner;
+d->owner = strcpy(d->owner, owner);
 return (d);
 }
