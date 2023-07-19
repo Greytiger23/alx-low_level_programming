@@ -18,7 +18,15 @@ int a, b;
 d = malloc(sizeof(dog_t));
 a = strlen(name);
 b = strlen(owner);
-if (name == NULL || age < 0 || owner == NULL)
+if (name == NULL)
+{
+return (NULL);
+}
+if (age < 0)
+{
+return (NULL);
+}
+if (owner == NULL)
 {
 return (NULL);
 }
