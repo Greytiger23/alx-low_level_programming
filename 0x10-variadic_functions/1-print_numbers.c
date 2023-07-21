@@ -17,10 +17,10 @@ unsigned int b;
 va_start(ap, n);
 for (b = 0; b < n; b++)
 {
-printf("%d, ", va_arg(ap, int));
-if (separator == NULL)
+printf("%d", va_arg(ap, int));
+if (separator != NULL && b != n - 1)
 {
-return;
+printf("%s", separator);
 }
 }
 printf("\n");
