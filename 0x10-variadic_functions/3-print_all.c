@@ -17,6 +17,7 @@ a = strlen(format);
 if (format == NULL)
 {
 printf("\n");
+exit(0);
 }
 va_start(ap, format);
 while (format[x])
