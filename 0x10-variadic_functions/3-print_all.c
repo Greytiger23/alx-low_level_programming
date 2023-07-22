@@ -14,6 +14,10 @@ va_list ap;
 unsigned int a, x = 0;
 char *s, *y = ", ";
 a = strlen(format);
+if (format == NULL)
+{
+printf("\n");
+}
 va_start(ap, format);
 while (format[x])
 {
@@ -30,11 +34,7 @@ printf("%f", va_arg(ap, double));
 break;
 case 's':
 s = va_arg(ap, char *);
-if (s == NULL)
-{
-printf("(nil)");
-}
-printf("%s", s);
+printf("%s", s != NULL ? s : "(nil)");
 break;
 default:
 x++;
