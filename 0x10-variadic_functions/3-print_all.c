@@ -16,8 +16,7 @@ char *s, *y = ", ";
 a = strlen(format);
 if (format == NULL)
 {
-printf("\n");
-exit(0);
+return;
 }
 va_start(ap, format);
 while (format[x])
