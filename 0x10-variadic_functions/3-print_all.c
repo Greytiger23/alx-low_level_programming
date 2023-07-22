@@ -11,11 +11,11 @@
 void print_all(const char * const format, ...)
 {
 va_list ap;
-char c, *s;
-int i, a, x;
-float f;
+int a, x;
+char *s, *y;
 a = strlen(format);
 x = 0;
+y = ", ";
 va_start(ap, format);
 while (format[x])
 {
@@ -23,20 +23,17 @@ switch (format[x])
 {
 case 'c':
 {
-c = va_arg(ap, int);
-printf("%d", c);
+printf("%c", va_arg(ap, int));
 break;
 }
 case 'i':
 {
-i = va_arg(ap, int);
-printf("%d", i);
+printf("%d", va_arg(ap, int));
 break;
 }
 case 'f':
 {
-f = (float)va_arg(ap, double);
-printf("%f", f);
+printf("%f", va_arg(ap, double));
 break;
 }
 case 's':
@@ -45,18 +42,16 @@ s = va_arg(ap, char *);
 if (s == NULL)
 {
 printf("(nil)");
+break;
 }
 printf("%s", s);
 break;
 }
 x++;
-continue;
 }
-if (format[x] == 'c' || format[x] == 'i' ||
-format[x] == 'f' || format[x] == 's' ||
-x != a - 1 || format != NULL)
+if (x != a - 1 && format != NULL)
 {
-printf(", ");
+printf("%s", y);
 }
 x++;
 }
