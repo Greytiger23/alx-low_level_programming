@@ -11,33 +11,24 @@
 void print_all(const char * const format, ...)
 {
 va_list ap;
-unsigned int a, x;
-char *s, *y;
+unsigned int a, x = 0;
+char *s, *y = ", ";
 a = strlen(format);
-x = 0;
-y = ", ";
 va_start(ap, format);
 while (format[x])
 {
 switch (format[x])
 {
 case 'c':
-{
 printf("%c", va_arg(ap, int));
 break;
-}
 case 'i':
-{
 printf("%d", va_arg(ap, int));
 break;
-}
 case 'f':
-{
 printf("%f", va_arg(ap, double));
 break;
-}
 case 's':
-{
 s = va_arg(ap, char *);
 if (s == NULL)
 {
@@ -45,12 +36,9 @@ printf("(nil)");
 }
 printf("%s", s);
 break;
-}
 default:
-{
 x++;
 continue;
-}
 }
 if (x != a - 1 && format != NULL)
 {
