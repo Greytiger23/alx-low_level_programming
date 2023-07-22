@@ -22,6 +22,7 @@ b = va_arg(ap, char *);
 if (b == NULL)
 {
 printf("(nil)");
+return;
 }
 printf("%s", b);
 if (separator != NULL && a != n - 1)
