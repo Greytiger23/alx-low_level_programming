@@ -16,10 +16,6 @@ va_list ap;
 unsigned int a;
 char *b;
 va_start(ap, n);
-if (separator == NULL)
-{
-return;
-}
 for (a = 0; a < n; a++)
 {
 b = va_arg(ap, char *);
