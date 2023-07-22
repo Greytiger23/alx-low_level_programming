@@ -11,7 +11,7 @@
 void print_all(const char * const format, ...)
 {
 va_list ap;
-int a, x;
+unsigned int a, x;
 char *s, *y;
 a = strlen(format);
 x = 0;
@@ -42,12 +42,15 @@ s = va_arg(ap, char *);
 if (s == NULL)
 {
 printf("(nil)");
-break;
 }
 printf("%s", s);
 break;
 }
+default:
+{
 x++;
+continue;
+}
 }
 if (x != a - 1 && format != NULL)
 {
