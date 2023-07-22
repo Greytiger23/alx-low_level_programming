@@ -16,14 +16,13 @@ va_list ap;
 unsigned int a;
 char *b;
 va_start(ap, n);
-for (a = 0; a < n; a++)
-{
 b = va_arg(ap, char *);
 if (b == NULL)
 {
 printf("(nil)");
-return;
 }
+for (a = 0; a < n; a++)
+{
 printf("%s", b);
 if (separator != NULL && a != n - 1)
 {
