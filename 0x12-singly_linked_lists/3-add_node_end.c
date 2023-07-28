@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- * add_node - function that adds node at the beginning
+ * add_node_end - function that adds node at the end
  * @head: pointer array
  * @str: char array
  * Return: address of new element, or NULL if fail
