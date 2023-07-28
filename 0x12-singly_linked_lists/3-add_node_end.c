@@ -10,9 +10,10 @@
  * Return: address of new element, or NULL if fail
  */
 
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 list_t *a;
+list_t *x = *head;
 unsigned int b;
 b = 0;
 if (str == NULL)
@@ -30,7 +31,16 @@ return (NULL);
 }
 a->str = strdup(str);
 a->len = b;
-a->next = *head;
+a->next = NULL;
+if (*head == NULL)
+{
 *head = a;
-return (*head);
+return (a);
+}
+while (x->next != NULL)
+{
+x = x->next;
+}
+x->next = a;
+return (a);
 }
