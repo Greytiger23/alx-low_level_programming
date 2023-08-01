@@ -19,5 +19,5 @@ a = b->next;
 free(b);
 b = a;
 }
-*head = NULL;
+*b = NULL;
 }
