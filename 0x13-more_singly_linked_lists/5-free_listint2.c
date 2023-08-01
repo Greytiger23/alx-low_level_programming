@@ -18,5 +18,8 @@ a = (*head)->next;
 free(*head);
 *head = a;
 }
+if (*head == NULL)
+{
 *head = NULL;
+}
 }
