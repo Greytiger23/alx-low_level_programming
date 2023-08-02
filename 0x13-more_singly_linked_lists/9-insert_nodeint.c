@@ -23,15 +23,15 @@ return (NULL);
 }
 a->n = n;
 a->next = NULL;
+if (idx != idx + 1)
+{
+return (NULL);
+}
 while (idx > 0 && b != NULL)
 {
 a = b;
 b = b->next;
 idx--;
-}
-if (idx > idx - 1)
-{
-return (NULL);
 }
 if (c == NULL)
 {
