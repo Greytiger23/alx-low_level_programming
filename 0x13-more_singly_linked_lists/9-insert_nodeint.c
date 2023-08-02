@@ -19,11 +19,10 @@ unsigned int x = sizeof(idx);
 a = malloc(sizeof(listint_t));
 if (*head == NULL || a == NULL)
 {
-return (NULL); }
-if (a != NULL)
-{
+return (NULL);
+}
 a->n = n;
-a->next = NULL; }
+a->next = NULL;
 while (idx > 0 && *head != NULL)
 {
 c = b;
@@ -39,6 +38,7 @@ a->next = *head;
 else
 {
 a->next = b;
-c->next = a; }
-return (a);
+c->next = a;
+return (a); }
+return (NULL);
 }
