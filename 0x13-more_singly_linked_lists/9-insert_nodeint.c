@@ -32,12 +32,7 @@ if (idx > x)
 {
 return (NULL);
 }
-if (c == NULL)
-{
-a->next = *head;
-*head = a;
-}
-else
+if (c != NULL)
 {
 a->next = b;
 c->next = a;
