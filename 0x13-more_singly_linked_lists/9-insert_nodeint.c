@@ -30,15 +30,17 @@ b = b->next;
 idx--; }
 if (idx > x)
 {
-return (NULL); }
+return (NULL);
+}
 if (c == NULL)
 {
 a->next = *head;
-*head = a; }
+*head = a;
+}
 else
 {
 a->next = b;
 c->next = a;
-return (a); }
-return (NULL);
+}
+return (a);
 }
