@@ -32,10 +32,12 @@ if (idx > x)
 {
 return (NULL);
 }
-if (c != NULL)
+if (c == NULL)
 {
+a->next = *head;
+*head = a;
+}
 a->next = b;
 c->next = a;
-}
 return (a);
 }
