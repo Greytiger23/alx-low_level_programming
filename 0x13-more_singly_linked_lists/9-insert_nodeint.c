@@ -28,7 +28,7 @@ while (idx > 0 && *head != NULL)
 c = b;
 b = b->next;
 idx--; }
-if (idx > x)
+if (idx == x)
 {
 return (NULL);
 }
@@ -37,7 +37,10 @@ if (c == NULL)
 a->next = *head;
 *head = a;
 }
+else
+{
 a->next = b;
 c->next = a;
+}
 return (a);
 }
