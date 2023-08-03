@@ -25,8 +25,9 @@ while (a != b)
 {
 printf("[%p] %d\n", (void *)a, a->n);
 a = a->next;
+x++;
 }
-return (x);
+exit(98);
 }
 printf("[%p] %d\n", (void *)a, a->n);
 a = a->next;
