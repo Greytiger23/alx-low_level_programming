@@ -22,12 +22,12 @@ x = 0;
 }
 if (!x)
 {
-printf("%d", (n & b) ? 1 : 0);
+_putchar((n & b) ? '1' : '0');
 }
 b >>= 1;
 }
 if (x)
 {
-printf("0");
+_putchar('0');
 }
 }
