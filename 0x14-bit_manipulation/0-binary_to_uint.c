@@ -10,7 +10,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-int s, y, a = 1;
+int y;
 unsigned int x = 0;
 if (b == NULL)
 {
@@ -18,15 +18,20 @@ return (0);
 }
 for (y = 0; b[y] != '\0'; y++)
 {
-if (b[y] == '0' || b[y] == '1')
+if (b[y] == '0')
 {
-s = b[y] - '0';
-x += s * a;
-a *= 2;
+x <<= 1;
+}
+else
+{
+if (b[y] == '1')
+{
+x = (x << 1) | 1;
 }
 else
 {
 return (0);
+}
 }
 }
 return (x);
