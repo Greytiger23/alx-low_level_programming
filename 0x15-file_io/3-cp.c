@@ -6,9 +6,6 @@
 #include <string.h>
 #include <errno.h>
 
-#define BUFFER_SIZE 1024
-void print_e(const char *mess, const char *filename, int c);
-
 /**
  * main - Entry point
  * @argc: number of arguments
