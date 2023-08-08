@@ -35,16 +35,21 @@ return (0);
 x = read(a, b, letters);
 if (x == -1)
 {
+perror("error opening file");
 close(a);
+free(b);
 return (0);
 }
 b[x] = '\0';
 y = write(STDOUT_FILENO, b, x);
 if (y == -1 || (ssize_t)y != x)
 {
+perror("error opening file");
 close(a);
+free(b);
 return (0);
 }
 close(a);
+free(b);
 return (x);
 }
