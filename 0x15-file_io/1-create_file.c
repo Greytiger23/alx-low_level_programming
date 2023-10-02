@@ -25,6 +25,7 @@ return (-1);
 x = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
 if (x == -1)
 {
+perror("Error creating the file");
 return (-1);
 }
 if (text_content != NULL)
@@ -33,6 +34,7 @@ a = strlen(text_content);
 b = write(x, text_content, a);
 if (b == -1 || b != a)
 {
+perror("Error writing to the file");
 close(x);
 return (-1);
 }
