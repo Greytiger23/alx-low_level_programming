@@ -31,7 +31,7 @@ x = malloc(letters + 1);
 if (!x)
 {
 close(i);
-return(i);
+return (i);
 }
 a = read(i, x, letters);
 if (a == -1)
