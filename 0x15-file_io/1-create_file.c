@@ -31,7 +31,7 @@ if (text_content != NULL)
 {
 a = strlen(text_content);
 b = write(x, text_content, a);
-if (b == -1 || b != 1)
+if (b == -1 || b != a)
 {
 close(x);
 return (-1);
