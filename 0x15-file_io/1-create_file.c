@@ -2,9 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
-#include <stddef.h>
 #include <unistd.h>
-#include <sys/stat.h>
 #include <string.h>
 
 /**
@@ -31,7 +29,7 @@ if (text_content != NULL)
 {
 a = strlen(text_content);
 b = write(x, text_content, a);
-if (b == -1 || b != a)
+if (b == -1)
 {
 close(x);
 return (-1);
