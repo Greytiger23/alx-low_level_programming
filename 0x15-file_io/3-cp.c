@@ -47,7 +47,5 @@ if (close(a) == -1 || close(b) == -1)
 dprintf(2, "Error: Can't close fd %d\n", a);
 exit(100);
 }
-close(a);
-close(b);
 return (0);
 }
