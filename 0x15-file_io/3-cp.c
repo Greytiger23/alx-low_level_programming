@@ -15,8 +15,7 @@
 
 int main(int ac, char *av[])
 {
-const char *file_from = av[1];
-const char *file_to = av[2];
+const char *file_from, *file_to;
 int a, b;
 char buffer[BUFFER_SIZE];
 ssize_t x, y;
@@ -25,6 +24,8 @@ if (ac != 3)
 dprintf(2, "Usage: cp file_from file_to\n");
 exit(97);
 }
+file_from = av[1];
+file_to = av[2];
 a = open(file_from, O_RDONLY);
 b = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 while ((x = read(a, buffer, BUFFER_SIZE)) > 0)
