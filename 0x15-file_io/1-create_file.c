@@ -15,7 +15,7 @@
 int create_file(const char *filename, char *text_content)
 {
 int x;
-ssize_t a, b;
+int b;
 if (filename == NULL)
 {
 return (-1);
@@ -27,8 +27,7 @@ return (-1);
 }
 if (text_content != NULL)
 {
-a = strlen(text_content);
-b = write(x, text_content, a);
+b = write(x, text_content, strlen(text_content));
 if (b == -1)
 {
 close(x);
