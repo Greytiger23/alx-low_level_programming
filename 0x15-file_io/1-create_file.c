@@ -1,9 +1,9 @@
 #include "main.h"
-#include <stddef.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <stddef.h>
+#include <unistd.h>
 #include <sys/stat.h>
 #include <string.h>
 
