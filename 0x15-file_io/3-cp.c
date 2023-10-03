@@ -18,7 +18,7 @@ int main(int ac, char *av[])
 const char *file_from = av[1];
 const char *file_to = av[2];
 int a, b;
-char buff[BUFFER_SIZE];
+char buffer[BUFFER_SIZE];
 ssize_t x, y;
 if (ac != 3)
 {
@@ -27,9 +27,9 @@ exit(97);
 }
 a = open(file_from, O_RDONLY);
 b = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-while ((x = read(a, buff, BUFFER_SIZE)) > 0)
+while ((x = read(a, buffer, BUFFER_SIZE)) > 0)
 {
-y = write(b, buff, x);
+y = write(b, buffer, x);
 if (y == -1 || b == -1)
 {
 dprintf(2, "Error: Can't read from file %s\n", file_to);
