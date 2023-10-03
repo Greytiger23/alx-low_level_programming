@@ -48,7 +48,7 @@ return (0);
 }
 /**
  * closefd - function that closes the file descriptors
- * @a: integer
+ * @x: integer
  * Return: void
  */
 void closefd(int x)
