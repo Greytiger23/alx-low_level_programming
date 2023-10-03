@@ -35,14 +35,17 @@ y = write(b, buff, x);
 if (y == -1 || b == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_to);
+free(buff);
 exit(99);
 }
 }
 if (x == -1 || a == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+free(buff);
 exit(98);
 }
+free(buff);
 closefd(a);
 closefd(b);
 return (0);
