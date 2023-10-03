@@ -23,34 +23,29 @@ ssize_t x, y;
 if (ac != 3)
 {
 dprintf(2, "Usage: cp file_from file_to\n");
-exit(97); }
+exit(97);
+}
 a = open(file_from, O_RDONLY);
-if (a == -1)
-{
-dprintf(2, "Error: Can't read from file %s\n", file_from);
-exit(98); }
 b = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-if (b == -1)
-{
-dprintf(2, "Error: Can't read from file %s\n", file_to);
-close(a);
-exit(99); }
 while ((x = read(a, buff, BUFFER_SIZE)) > 0)
 {
 y = write(b, buff, x);
-if (y == -1)
+if (y == -1 || b == -1)
 {
 dprintf(2, "Error: Can't read from file %s\n", file_to);
-exit(99); }
+exit(99);
 }
-if (x == -1)
+}
+if (x == -1 || a == -1)
 {
 dprintf(2, "Error: Can't read from file %s\n", file_from);
-exit(98); }
+exit(98);
+}
 if (close(a) == -1 || close(b) == -1)
 {
 dprintf(2, "Error: Can't close fd %d\n", a);
-exit(100); }
+exit(100);
+}
 close(a);
 close(b);
 return (0);
