@@ -36,5 +36,5 @@ return (-1);
 }
 }
 close(x);
-return (-1);
+return (1);
 }
