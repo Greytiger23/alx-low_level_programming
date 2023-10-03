@@ -20,7 +20,8 @@ if (filename == NULL)
 {
 return (-1);
 }
-x = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+x = open(filename, O_CREAT | O_WRONLY | O_TRUNC,
+S_IRUSR | S_IWUSR);
 if (x == -1)
 {
 return (-1);
