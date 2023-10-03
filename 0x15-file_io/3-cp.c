@@ -1,13 +1,10 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-
-#define BUFFER_SIZE 1024
-
+#include "main.h"
 /**
  * main - program that copies the content of a
  * file to another file
@@ -18,54 +15,42 @@
 
 int main(int ac, char *av[])
 {
-const char *file_from;
-const char *file_to;
+const char *file_from = av[1];
+const char *file_to = av[2];
 int a, b;
 char buff[BUFFER_SIZE];
 ssize_t x, y;
 if (ac != 3)
 {
 dprintf(2, "Usage: cp file_from file_to\n");
-exit(97);
-}
-file_from = av[1];
-file_to = av[2];
+exit(97); }
 a = open(file_from, O_RDONLY);
 if (a == -1)
 {
 dprintf(2, "Error: Can't read from file %s\n", file_from);
-exit(98);
-}
+exit(98); }
 b = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 if (b == -1)
 {
 dprintf(2, "Error: Can't read from file %s\n", file_to);
 close(a);
-exit(99);
-}
+exit(99); }
 while ((x = read(a, buff, BUFFER_SIZE)) > 0)
 {
 y = write(b, buff, x);
 if (y == -1)
 {
 dprintf(2, "Error: Can't read from file %s\n", file_to);
-close(a);
-close(b);
-exit(99);
-}
+exit(99); }
 }
 if (x == -1)
 {
 dprintf(2, "Error: Can't read from file %s\n", file_from);
-close(a);
-close(b);
-exit(98);
-}
+exit(98); }
 if (close(a) == -1 || close(b) == -1)
 {
-dprintf(2, "Error: Can't close fd\n");
-exit(100);
-}
+dprintf(2, "Error: Can't close fd %d\n", a);
+exit(100); }
 close(a);
 close(b);
 return (0);
