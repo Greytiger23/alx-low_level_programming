@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include <elf.h>
 #include <stdint.h>
+#include <string.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 
@@ -62,8 +62,9 @@ close(a);
 }
 if (head.e_ident[0] != 0x7f || head.e_ident[1] != 0)
 {
-printf("Error: not a Elf file");
+dprintf(STDERR_FILENO, "Error: not a Elf file %d", a);
 close(a);
+exit(98);
 }
 print_header(&head);
 close(a);
