@@ -17,14 +17,13 @@ int main(int ac, char *av[])
 {
 const char *file_from, *file_to;
 int a, b;
-char *buff;
+char buff[BUFFER_SIZE];
 ssize_t x, y;
 if (ac != 3)
 {
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 exit(97);
 }
-buff = malloc(sizeof(char) * 1024);
 file_from = av[1];
 file_to = av[2];
 a = open(file_from, O_RDONLY);
@@ -35,17 +34,14 @@ y = write(b, buff, x);
 if (y == -1 || b == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_to);
-free(buff);
 exit(99);
 }
 }
 if (x == -1 || a == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
-free(buff);
 exit(98);
 }
-free(buff);
 closefd(a);
 closefd(b);
 return (0);
