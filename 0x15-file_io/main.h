@@ -4,8 +4,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <elf.h>
-#include <sys/types.h>
-#include <sys/stat.h>
+#include <stdint.h>
 #include <stdio.h>
 #define BUFFER_SIZE 1024
 
@@ -16,4 +15,5 @@ int append_text_to_file(const char *filename, char *text_content);
 int main(int ac, char *av[]);
 void closefd(int x);
 void print_header(const Elf64_Ehdr *head);
+int main(int arc, char *arv[]);
 #endif
