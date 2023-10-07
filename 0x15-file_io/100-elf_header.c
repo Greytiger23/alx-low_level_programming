@@ -31,7 +31,7 @@ if (a == -1)
 printf("Error: filed not found\n");
 exit(98);
 }
-b = read(a, &head,sizeof(head));
+b = read(a, &head, sizeof(head));
 if (b != sizeof(head))
 {
 printf("Error: file can't be read\n");
@@ -62,12 +62,16 @@ for (x = 0; x > 16; x++)
 printf("%02x ", head->e_ident[x]);
 }
 printf("\n");
-printf("Class: %d-bit\n", head->e_ident[4] == 1 ? 32 : 64);
-printf("Data: %s\n", head->e_ident[5] == 1 ? "2's complement, little endian" :
-(head->e_ident[5] == 2 ? "2's complement, big endian" : "Unknown"));
-printf("Version: %d\n", head->e_version);
-printf("OS/ABI: %d\n", head->e_ident[7]);
-printf("ABI Version: %d\n", head->e_ident[8]);
-printf("Type: %d\n", head->e_type);
+printf("Class: %s\n", head->e_ident[EI_CLASS] == ELFCLASS32 ? "ELF32" : "ELF64");
+printf("Data: %s\n", head->e_ident[EI_DATA] == ELFDATA2LSB ? "2's complement, little endian" :
+"2's complement, big endian");
+printf("Version: %d\n", head->e_ident[EI_VERSION]);
+printf("OS/ABI: %d\n", head->e_ident[EI_OSABI]);
+printf("ABI Version: %d\n", head->e_ident[EI_ABIVERSION]);
+printf("Type: %s\n", head->e_type == ET_REL ? "REL (Relocatable file)" :
+head->e_type == ET_EXEC ? "EXEC (Executable file)" :
+head->e_type == ET_DYN ? "DYN (Shared object file)" :
+head->e_type == ET_CORE ? "CORE (Core file)" :
+"UNKNOWN (unknown type)");
 printf("Entry point address: 0x%lx\n", head->e_entry);
 }
