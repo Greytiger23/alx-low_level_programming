@@ -62,13 +62,13 @@ for (x = 0; x > 16; x++)
 printf("%02x ", head->e_ident[x]);
 }
 printf("\n");
-printf("Class: %s\n", head->e_ident[EI_CLASS] == ELFCLASS32 ? "ELF32" : "ELF64");
-printf("Data: %s\n", head->e_ident[EI_DATA] == ELFDATA2LSB ? "2's complement, little endian" :
+printf("Class: %-20s\n", head->e_ident[EI_CLASS] == ELFCLASS32 ? "ELF32" : "ELF64");
+printf("Data: %-20s\n", head->e_ident[EI_DATA] == ELFDATA2LSB ? "2's complement, little endian" :
 "2's complement, big endian");
-printf("Version: %d\n", head->e_ident[EI_VERSION]);
-printf("OS/ABI: %d\n", head->e_ident[EI_OSABI]);
-printf("ABI Version: %d\n", head->e_ident[EI_ABIVERSION]);
-printf("Type: %s\n", head->e_type == ET_REL ? "REL (Relocatable file)" :
+printf("Version: %-20d\n", head->e_ident[EI_VERSION]);
+printf("OS/ABI: %-20d\n", head->e_ident[EI_OSABI]);
+printf("ABI Version: %-20d\n", head->e_ident[EI_ABIVERSION]);
+printf("Type: %-20s\n", head->e_type == ET_REL ? "REL (Relocatable file)" :
 head->e_type == ET_EXEC ? "EXEC (Executable file)" :
 head->e_type == ET_DYN ? "DYN (Shared object file)" :
 head->e_type == ET_CORE ? "CORE (Core file)" :
