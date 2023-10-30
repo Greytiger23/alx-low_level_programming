@@ -31,9 +31,10 @@ i = strlen(text_content);
 y = write(a, text_content, i);
 if (y == -1 || y != i)
 {
+close(a);
 return (-1);
 }
 }
 close(a);
-return (-1);
+return (1);
 }
