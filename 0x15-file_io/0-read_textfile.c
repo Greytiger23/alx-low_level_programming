@@ -40,7 +40,7 @@ free(b);
 return (0);
 }
 y = write(STDOUT_FILENO, b, x);
-if (y == -1 || (ssize_t)y != x)
+if (y == -1 || y != x)
 {
 close(a);
 free(b);
