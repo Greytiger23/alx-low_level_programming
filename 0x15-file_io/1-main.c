@@ -4,7 +4,8 @@
 
 /**
  * main - check the code
- *
+ * @ac: number of arguments
+ * @av: list of arguments
  * Return: Always 0.
  */
 int main(int ac, char **av)
