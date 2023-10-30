@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
@@ -33,8 +34,7 @@ if (fd_from == -1)
 {
 mess("Error: Can't read from file %s\n", file_from, 98);
 }
-fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR
-| S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 if (fd_to == -1)
 {
 close(fd_from);
