@@ -26,7 +26,7 @@ if (a == -1)
 {
 return (0);
 }
-b = malloc(letters + 1);
+b = (char *)malloc(letters);
 if (!b)
 {
 close(a);
