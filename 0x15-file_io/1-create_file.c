@@ -21,8 +21,7 @@ if (filename == NULL)
 {
 return (-1);
 }
-a = open(filename, O_CREAT | O_WRONLY
-| O_TRUNC, S_IRUSR | S_IWUSR);
+a = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 if (a == -1)
 {
 return (-1);
@@ -33,7 +32,6 @@ i = strlen(text_content);
 y = write(a, text_content, i);
 if (y == -1 || y != i)
 {
-close(a);
 return (-1);
 }
 }
