@@ -15,8 +15,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-int a;
-ssize_t i, y;
+int a, i, y;
 if (filename == NULL)
 {
 return (-1);
