@@ -45,8 +45,10 @@ exit(98);
  */
 void info(const Elf64_Ehdr *header)
 {
+int i;
 printf("Magic: ");
-for (int i = 0; i < 16; i++) {
+for (i = 0; i < 16; i++)
+{
 printf("%02x ", header->e_ident[i]);
 }
 printf("\n");
@@ -67,6 +69,7 @@ printf("Entry point address: 0x%lx\n", header->e_entry);
  */
 int main(int ac, char *av[])
 {
+Elf64_Ehdr header;
 const char *filename;
 ssize_t x;
 int fd;
@@ -80,7 +83,6 @@ if (fd == -1)
 {
 mess("Error: Can't open file");
 }
-Elf64_Ehdr header;
 x = read(fd, &header, sizeof(header));
 if (x != sizeof(header))
 {
