@@ -25,13 +25,15 @@ uint16_t e_shentsize;
 uint16_t e_shnum;
 uint16_t e_shstrndx;
 } Elf64_Ehdr;
+void messe(const char *m);
+void info(const Elf64_Ehdr *header);
 /**
- * mess - print error message
+ * messe - print error message
  * @m: char
  * Return: void
  */
 
-void mess(const char *m)
+void messe(const char *m)
 {
 fprintf(stderr, "%s\n", m);
 exit(98);
@@ -73,25 +75,25 @@ ssize_t x;
 int fd;
 if (ac != 2)
 {
-mess("Usage: elf_header elf_filename");
+messe("Usage: elf_header elf_filename");
 }
 filename = av[1];
 fd = open(filename, O_RDONLY);
 if (fd == -1)
 {
-mess("Error: Can't open file");
+messe("Error: Can't open file");
 }
 x = read(fd, &header, sizeof(header));
 if (x != sizeof(header))
 {
 close(fd);
-mess("Error: Can't read ELF header");
+messe("Error: Can't read ELF header");
 }
 if (header.e_ident[0] != 0x7f || strcmp((char *)
 &header.e_ident[1], "ELF") != 0)
 {
 close(fd);
-mess("Error: Not an ELF file");
+messe("Error: Not an ELF file");
 }
 info(&header);
 close(fd);
