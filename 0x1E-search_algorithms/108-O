@@ -1,1 +1,1 @@
-O(sqrt(nlog(n)))
+O(n)
